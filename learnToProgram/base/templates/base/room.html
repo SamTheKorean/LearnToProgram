@@ -21,7 +21,7 @@
             
             {% if room.host == request.user %}
             <div class="room__topRight">
-              <a href="#">
+              <a href="{% url 'update-room' room.id %}">
                 <svg
                   enable-background="new 0 0 24 24"
                   height="32"
@@ -79,7 +79,7 @@
                 rerum consectetur, voluptatem repudiandae eum ea porro cupiditate provident nulla, deserunt, ab ipsum
                 corporis laboriosam deleniti molestias?
               </div> {% endcomment %}
-              <span class="room__topics">{{room.topic}}}</span>
+              <span class="room__topics">{{room.topic}}</span>
             </div>
             <div class="room__conversation">
               <div class="threads scroll">
